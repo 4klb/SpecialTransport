@@ -4,10 +4,9 @@ using System.Text;
 
 namespace SpecialTransport.Models
 {
-    public class UserType : Role
+    public class UserType : Entity
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public Role RoleId { get; set; }
+        public Guid RoleId { get; set; }
         public Role Role { get; set; }
     }
 }

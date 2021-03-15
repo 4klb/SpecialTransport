@@ -6,6 +6,7 @@ namespace SpecialTransport.Models
 {
     public class Role : Entity
     {
+
         public string AccessName { get; set; }
     }
 }
