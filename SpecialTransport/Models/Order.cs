@@ -1,4 +1,4 @@
-﻿using SpecialTrancport.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,9 +29,10 @@ namespace SpecialTransport.Models
         public Guid customerId { get; set; }
         public User customer { get; set; }
 
-        //Исполнитель
-        public Guid ExecutorId { get; set; }
-        public User Executor { get; set; }
+        public string Mark { get; set; }
+        public string Discription { get; set; }
+
+
 
     }
 }

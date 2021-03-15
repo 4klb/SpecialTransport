@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using SpecialTransport.Models;
 
 
@@ -8,7 +9,7 @@ namespace SpecialTransport.Data
     {
         public SpecialTransportContext()
         {
-            Database.Migrate();
+            
         }
 
         DbSet<Order> Orders { get; set; }
@@ -19,10 +20,16 @@ namespace SpecialTransport.Data
         DbSet<User> Users { get; set; }
         DbSet<UserType> UserTypes { get; set; }
         DbSet<Role> Roles { get; set; }
+        DbSet<Mark> Marks { get; set; }
+        DbSet<Mark> Work { get; set; }
+
+        //DbSet<UserOrder> UserOrders { get; set; }
+        //DbSet<Recovery> Recoveries { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = SpecialTransport; Trusted_connection = true;");
+            optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = SpecialTransport4; Trusted_connection = true;");
         }
     }
 }

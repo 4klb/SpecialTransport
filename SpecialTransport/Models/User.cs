@@ -6,7 +6,7 @@ namespace SpecialTransport.Models
 {
     public class User : Entity
     {
-        public UserType UserTypeId { get; set; }
+        public Guid UserTypeId { get; set; }
         public UserType UserType { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
